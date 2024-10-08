@@ -17,12 +17,17 @@ jobs:
 
     steps:
       - name: Checkout
-        id: checkout
+        uses: actions/checkout@v4
+        with:
+          path: main
+
+      - name: Checkout tools repo
         uses: actions/checkout@v4
         with:
           repository: ahnafalfariza/smart-contract-audit
+          path: audit
 
-      - name: Test Local Action
+      - name: Test Action
         id: test-action
         uses: ahnafalfariza/smart-contract-audit@master
         with:
