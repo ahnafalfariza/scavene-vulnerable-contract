@@ -22,7 +22,7 @@ jobs:
 
       - name: Test Local Action
         id: test-action
-        uses: ahnafalfariza/smart-contract-audit
+        uses: ahnafalfariza/smart-contract-audit@master
         with:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
