@@ -21,16 +21,8 @@ jobs:
         with:
           path: main
 
-      - name: Checkout tools repo
-        uses: actions/checkout@v4
-        with:
-          repository: ahnafalfariza/smart-contract-audit
-          path: audit
-          token: ${{ secrets.GH_PAT }} 
-
-      - name: Test Action
-        id: test-action
-        uses: ahnafalfariza/smart-contract-audit@master
+      - name: Smart Contract Audit
+        uses: ahnafalfariza/smart-contract-audit@test-call-action
         with:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
