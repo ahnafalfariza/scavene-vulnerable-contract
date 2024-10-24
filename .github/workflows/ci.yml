@@ -16,22 +16,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          path: contract
-
-      - name: List directory first co
-        run: |
-          echo "Contents of the current directory:"
-          ls -la
- 
       - name: Checkout tool
         uses: actions/checkout@v4
         with:
           repository: ahnafalfariza/scavene
           ref: test-ci
-          path: tools
+
+      - name: List directory first co
+        run: |
+          echo "Contents of the current directory:"
+          ls -la
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: contract
 
       - name: List directory contents
         run: |
