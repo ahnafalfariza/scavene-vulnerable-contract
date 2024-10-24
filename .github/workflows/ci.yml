@@ -19,8 +19,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          path: ./contract
+          path: contract
 
+      - name: List directory first co
+        run: |
+          echo "Contents of the current directory:"
+          ls -la
+ 
       - name: Checkout tool
         uses: actions/checkout@v4
         with:
@@ -31,8 +36,6 @@ jobs:
         run: |
           echo "Contents of the current directory:"
           ls -la
-          echo "Contents of the ./contract directory:"
-          ls -la ./contract
 
       - name: Smart Contract Audit
         uses: ahnafalfariza/scavene@test-ci
