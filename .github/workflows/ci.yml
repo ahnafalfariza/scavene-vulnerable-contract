@@ -19,11 +19,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          path: main
+          path: contract
 
       - name: Smart Contract Audit
-        uses: ahnafalfariza/smart-contract-audit@test-call-action
+        uses: ahnafalfariza/scavene@develop
         with:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          folder_path: ./contract
           myToken: ${{ secrets.GITHUB_TOKEN }}
