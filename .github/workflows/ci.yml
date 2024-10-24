@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ahnafalfariza/scavene
-          branch: develop
+          ref: develop
 
       - name: Smart Contract Audit
         uses: ahnafalfariza/scavene@develop
