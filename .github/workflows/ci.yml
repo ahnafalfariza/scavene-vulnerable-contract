@@ -21,10 +21,15 @@ jobs:
         with:
           path: contract
 
+      - name: Checkout tool repository
+        uses: actions/checkout@v4
+        with:
+          repository: ahnafalfariza/scavene
+          branch: develop
+
       - name: Smart Contract Audit
         uses: ahnafalfariza/scavene@develop
         with:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          folder_path: ./contract
           myToken: ${{ secrets.GITHUB_TOKEN }}
