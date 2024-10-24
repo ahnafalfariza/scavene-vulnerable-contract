@@ -16,27 +16,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout tool
-        uses: actions/checkout@v4
-        with:
-          repository: ahnafalfariza/scavene
-          ref: test-ci
-
-      - name: List directory first co
-        run: |
-          echo "Contents of the current directory:"
-          ls -la
-
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          path: contract
-
-      - name: List directory contents
-        run: |
-          echo "Contents of the current directory:"
-          ls -la
-
       - name: Smart Contract Audit
         uses: ahnafalfariza/scavene@test-ci
         with:
