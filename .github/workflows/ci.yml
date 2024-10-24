@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          path: contract
 
       - name: Smart Contract Audit
         uses: ahnafalfariza/scavene@test-ci
