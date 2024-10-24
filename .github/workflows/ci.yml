@@ -21,6 +21,12 @@ jobs:
         with:
           path: contract
 
+      - name: Checkout tool
+        uses: actions/checkout@v4
+        with:
+          repository: ahnafalfariza/scavene
+          ref: test-ci
+
       - name: Smart Contract Audit
         uses: ahnafalfariza/scavene@test-ci
         with:
