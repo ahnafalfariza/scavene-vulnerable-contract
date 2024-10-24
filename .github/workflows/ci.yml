@@ -27,6 +27,13 @@ jobs:
           repository: ahnafalfariza/scavene
           ref: test-ci
 
+      - name: List directory contents
+        run: |
+          echo "Contents of the current directory:"
+          ls -la
+          echo "Contents of the ./contract directory:"
+          ls -la ./contract
+
       - name: Smart Contract Audit
         uses: ahnafalfariza/scavene@test-ci
         with:
