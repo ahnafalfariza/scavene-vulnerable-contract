@@ -1,8 +1,13 @@
 name: 'Smart Contract Vulnerabilities'
 
-on:
+on: 
   pull_request:
-    types: [opened, synchronize]
+    branches:
+      - master
+      - develop
+  push:
+    branches:
+      - "**"
 
 jobs:
   setup:
