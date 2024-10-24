@@ -31,6 +31,7 @@ jobs:
         with:
           repository: ahnafalfariza/scavene
           ref: test-ci
+          path: tools
 
       - name: List directory contents
         run: |
