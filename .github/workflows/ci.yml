@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Smart Contract Audit
-        uses: ahnafalfariza/scavene@test-ci
+        uses: ahnafalfariza/scavene@develop
         with:
           openai_api_key: ${{ secrets.OPENAI_API_KEY }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
