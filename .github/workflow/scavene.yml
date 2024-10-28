@@ -1,0 +1,21 @@
+name: Scavene Smart Contract Audit
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions: "write-all"
+    steps:
+      - name: Scavene Audit
+        uses: ahnafalfariza/scavene@master
+        with:
+          openai_api_key: '${{ secrets.OPENAI_API_KEY }}'
+          anthropic_api_key: '${{ secrets.ANTHROPIC_API_KEY }}'
+          model: claude-3.5-sonnet
+          myToken: '${{ secrets.GITHUB_TOKEN }}'
