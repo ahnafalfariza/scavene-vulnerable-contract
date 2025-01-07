@@ -13,7 +13,7 @@ jobs:
     permissions: "write-all"
     steps:
       - name: Scavene Audit
-        uses: ahnafalfariza/scavene@master
+        uses: ahnafalfariza/scavene@develop
         with:
           ref: develop
           openai_api_key: '${{ secrets.OPENAI_API_KEY }}'
