@@ -15,7 +15,9 @@ jobs:
       - name: Scavene Audit
         uses: ahnafalfariza/scavene@master
         with:
+          ref: develop
           openai_api_key: '${{ secrets.OPENAI_API_KEY }}'
+          provider: anthropic
           anthropic_api_key: '${{ secrets.ANTHROPIC_API_KEY }}'
           model: claude-3.5-sonnet
           myToken: '${{ secrets.GITHUB_TOKEN }}'
