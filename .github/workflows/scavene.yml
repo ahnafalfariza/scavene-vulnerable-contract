@@ -19,5 +19,5 @@ jobs:
           openai_api_key: '${{ secrets.OPENAI_API_KEY }}'
           provider: openai
           anthropic_api_key: '${{ secrets.ANTHROPIC_API_KEY }}'
-          model: gpt4o
+          model: gpt-4o
           myToken: '${{ secrets.GITHUB_TOKEN }}'
