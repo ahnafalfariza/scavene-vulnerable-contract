@@ -17,7 +17,7 @@ jobs:
         with:
           ref: develop
           openai_api_key: '${{ secrets.OPENAI_API_KEY }}'
-          provider: anthropic
+          provider: openai
           anthropic_api_key: '${{ secrets.ANTHROPIC_API_KEY }}'
-          model: claude-3-5-sonnet-latest
+          model: gpt4o
           myToken: '${{ secrets.GITHUB_TOKEN }}'
